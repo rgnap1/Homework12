@@ -1,5 +1,5 @@
 public class Book {
-   private String name;
+   private String nameBook;
 
    private String author;
 
@@ -8,15 +8,15 @@ public class Book {
    private int totalPages;
 
 
-   public Book (String name,String author, int theYearOfPublishing, int totalPages){
-      this.name = name;
+   public Book (String nameBook,String author, int theYearOfPublishing, int totalPages){
+      this.nameBook = nameBook;
       this.author = author;
       this.theYearOfPublishing = theYearOfPublishing;
       this.totalPages = totalPages;
 
    }
-   public String getName(){
-      return this.name;
+   public String getNameBook(){
+      return this.nameBook;
    }
    public String getAuthor(){
       return this.author;

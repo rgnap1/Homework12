@@ -2,12 +2,12 @@ public class Author {
    private String firstName;
    private String lastName;
 
-   private String name;
+   private String nameAuthor;
 
     public Author(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.name = firstName + lastName;
+        this.nameAuthor = firstName + lastName;
     }
 
     public String getFirstName(){
@@ -16,8 +16,8 @@ public class Author {
     public String getLastName(){
         return this.lastName;
     }
-    public String getName(){
-        return this.name;
+    public String getnameAuthor(){
+        return this.nameAuthor;
     }
 
 
