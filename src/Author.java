@@ -20,6 +20,19 @@ public class Author {
     public String getAuthor(){
         return this.author;
     }
+    public String toString(){
+        return firstName + " : " + lastName;
+    }
+    public boolean equals(Object other){
+        if (this.getClass() != other.getClass()){
+            return false;
+        }
+        Author author1 = (Author) other;
+        return author.equals(author1.author);
+    }
+    public int hashCode(){
+        return java.util.Objects.hash(author);
+    }
 
 
 

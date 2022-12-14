@@ -36,5 +36,18 @@ public class Book {
 
       this.theYearOfPublishing = theYearOfPublishing;
    }
+   public String toString(){
+      return nameBook + " - " + author + " - " + theYearOfPublishing + " - " + totalPages;
+   }
+   public boolean equals(Object other){
+      if(this.getClass() != other.getClass()){
+         return false;
+      }
+      Book book1 = (Book) other;
+      return nameBook.equals(book1.nameBook);
+   }
+   public int hashCode(){
+      return java.util.Objects.hash(nameBook);
+   }
 
 }
