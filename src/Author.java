@@ -20,9 +20,11 @@ public class Author {
     public String getAuthor(){
         return this.author;
     }
+    @Override
     public String toString(){
         return firstName + " : " + lastName;
     }
+    @Override
     public boolean equals(Object other){
         if (this.getClass() != other.getClass()){
             return false;
@@ -32,13 +34,11 @@ public class Author {
         Author author1 = (Author) other;
         return author.equals(author1.author);
     }
+    @Override
     public int hashCode(){
+
         return java.util.Objects.hash(author);
     }
 
-
-
-
-    
 }
 

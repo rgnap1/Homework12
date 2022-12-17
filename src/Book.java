@@ -1,7 +1,7 @@
 public class Book {
    private String nameBook;
 
-   private Author author;
+   private final Author author;
 
    private int theYearOfPublishing;
 
@@ -36,9 +36,11 @@ public class Book {
 
       this.theYearOfPublishing = theYearOfPublishing;
    }
+  @Override
    public String toString(){
       return nameBook + " - " + author + " - " + theYearOfPublishing + " - " + totalPages;
    }
+   @Override
    public boolean equals(Object other){
       if(this.getClass() != other.getClass()){
          return false;
@@ -48,6 +50,7 @@ public class Book {
       Book book1 = (Book) other ;
       return nameBook.equals(book1.nameBook);
    }
+   @Override
    public int hashCode(){
       return java.util.Objects.hash(nameBook);
    }
