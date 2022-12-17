@@ -42,8 +42,10 @@ public class Book {
    public boolean equals(Object other){
       if(this.getClass() != other.getClass()){
          return false;
+      }else if (this.nameBook != ((Book) other).nameBook || this.author != ((Book) other).author || this.totalPages != ((Book) other).totalPages || this.theYearOfPublishing != ((Book) other).theYearOfPublishing ){
+         return false;
       }
-      Book book1 = (Book) other;
+      Book book1 = (Book) other ;
       return nameBook.equals(book1.nameBook);
    }
    public int hashCode(){

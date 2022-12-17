@@ -26,6 +26,8 @@ public class Author {
     public boolean equals(Object other){
         if (this.getClass() != other.getClass()){
             return false;
+        }else if (this.firstName != ((Author) other).firstName || this.lastName != ((Author) other).lastName){
+            return false;
         }
         Author author1 = (Author) other;
         return author.equals(author1.author);
