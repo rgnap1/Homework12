@@ -42,13 +42,12 @@ public class Book {
    }
    @Override
    public boolean equals(Object other){
-      if(this.getClass() != other.getClass()){
-         return false;
-      }else if (this.nameBook != ((Book) other).nameBook || this.author != ((Book) other).author || this.totalPages != ((Book) other).totalPages || this.theYearOfPublishing != ((Book) other).theYearOfPublishing ){
-         return false;
-      }
-      Book book1 = (Book) other ;
-      return nameBook.equals(book1.nameBook);
+       if (this == other)
+           return true;
+      if(other == null || this.getClass() != other.getClass())
+          return false;
+      Book book = (Book) other ;
+      return theYearOfPublishing == book.theYearOfPublishing && nameBook.equals(nameBook) && author.equals(author) && totalPages == book.totalPages;
    }
    @Override
    public int hashCode(){

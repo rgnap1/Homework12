@@ -1,6 +1,5 @@
 public class TestProgram {
  public static void main (String[] args){
-
   Author author = new Author("Joanne"," Rowling");
   Book book = new Book("Harry Potter",author,1997,9000);
   System.out.println("Book = " + book.getNameBook());
@@ -28,6 +27,7 @@ public class TestProgram {
   System.out.println(author1.hashCode());
   System.out.println(book.hashCode());
   System.out.println(book1.hashCode());
+
 
 
 

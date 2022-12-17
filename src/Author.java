@@ -26,13 +26,11 @@ public class Author {
     }
     @Override
     public boolean equals(Object other){
-        if (this.getClass() != other.getClass()){
+        if (this == other) return true;
+        if (other == null || this.getClass() != other.getClass())
             return false;
-        }else if (this.firstName != ((Author) other).firstName || this.lastName != ((Author) other).lastName){
-            return false;
-        }
-        Author author1 = (Author) other;
-        return author.equals(author1.author);
+        Author author = (Author) other;
+        return author.equals(author.author);
     }
     @Override
     public int hashCode(){
