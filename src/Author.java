@@ -30,7 +30,7 @@ public class Author {
         if (other == null || this.getClass() != other.getClass())
             return false;
         Author author = (Author) other;
-        return author.equals(author.author);
+        return author.equals(author.firstName) && author.equals(author.lastName);
     }
     @Override
     public int hashCode(){
